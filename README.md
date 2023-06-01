@@ -4,3 +4,6 @@
 ## Instalando material UI e algumas das suas dependencias
 **->** *npm install @mui/material @emotion/react @emotion/styled*
 **->** *npm install @mui/icons-material*
+
+## Next Auth
+*npm install next-auth*
