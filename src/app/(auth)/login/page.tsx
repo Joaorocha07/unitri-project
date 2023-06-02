@@ -2,97 +2,206 @@
 import styles from '../../../styles/Login.module.css';
 import React, { useState } from 'react';
 import { signIn, signOut, useSession } from 'next-auth/react';
+import { Grid, Box, Typography, Button, Checkbox } from '@mui/material';
 
 import { Input } from '@/components/Input';
 import { InputSenha } from '@/components/InputSenha/InputSenha';
 
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Login() {
-    const { data: session  } = useSession()
-    console.log(session);
+    // const { data: session  } = useSession()
+    // console.log(session);
+
+    const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
     const [codUser, setCodUser] = useState('');
     const [senha, setSenha] = useState('');
     const [codUserError, setCodUserError] = useState(false);
     const [senhaError, setSenhaError] = useState(false);
     
-    // const handleSubmit = async (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    //     event.preventDefault();
-        
-    //     let hasError = false;
-
-    //     if (!codUser) {
-    //         setCodUserError(true);
-    //         hasError = true;
-    //     } else {
-    //         setSenhaError(false);
-    //     }
-
-    //     if (!senha) {
-    //         setSenhaError(true)
-    //         hasError = true;
-    //     } else {
-    //         setSenhaError(false);
-    //     }
-
-    //     if (hasError) {
-    //         return;
-    //     }
-
-    //     const resposta = await fetch('https://acl-hmg.prod.unitri.edu.br/login');
-
-    //     console.log(resposta, codUser, senha);
-    // }
-
     return (
-        <>
-            <div className={styles.container}>
-                <form className={styles.form_login}>
-                    <div className={styles.logo_assoec}>
-                            <Image 
-                                src="/images/asoec.svg"
-                                width={150}
-                                height={150}
-                                alt='teste'
-                            />
+        <Grid 
+            item 
+            sx={{
+                position: 'relative',
+                display: 'grid',
+                minHeight: '100vh',
+                padding: '1em',
+                gridTemplateColumns: '1fr 1fr',
+                backgroundImage: `url('/images/students.png')`,
+                backgroundRepeat: 'no-repeat',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}>
+            <Box
+                sx={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    textAlign: 'center',
+                    padding: '50px',
+                    height: '85vh',
+                    width: '50vh',
+                    maxWidth: '90%',
+                    boxShadow: '5px 5px 10px 10px rgba(0, 0, 0, 0.5)',
+                    backgroundColor: 'white',
+                    }}>
+                <div className={styles.logo_assoec}>
+                        <Image 
+                            src="/images/asoec.svg"
+                            width={130}
+                            height={130}
+                            alt='teste'
+                        />
+                </div>
+                <Box
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'center',
+                        textAlign: 'center',
+                    }}
+                >
+                {/* <div className={styles.card}> */}
+                    <Typography 
+                        variant="h1" 
+                        sx={{ 
+                            fontSize: '40px',
+                            marginBottom: '10px', 
+                            textAlign: 'left', 
+                            fontFamily: 'Roboto, sans-serif' 
+                    }}>
+                        Bem-vindo à ASOEC!
+                    </Typography>
+                    <Typography 
+                        variant="body1" 
+                        sx={{ 
+                            textAlign: 'justify', 
+                            fontFamily: 'Roboto, sans-serif', 
+                            marginBottom: '50px' 
+                        }}>
+                        Somos um grupo de instituições de ensino, incluindo a Universo, Unitri e Colégio Dom Helder. Acesse suas informações
+                        e explore nossas ferramentas para uma jornada acadêmica eficiente.
+                    </Typography>
+                    <div className={styles.textfield}>
+                        <Input
+                            error={codUserError}
+                            type="number" 
+                            label="Código de usuário"
+                            value={codUser}
+                            onChange={(event) => setCodUser(event.target.value)}
+                        />
                     </div>
-                    <div className={styles.card}>
-                        <h1>Bem-vindo à ASOEC!</h1>
-                        <p>
-                            Somos um grupo de instituições de ensino, incluindo a Universo,
-                            Unitri e Colégio Dom Helder. Acesse suas informações e explore
-                            nossas ferramentas para uma jornada acadêmica eficiente.
-                        </p>
-                        <div className={styles.textfield}>
-                            <Input
-                                error={codUserError}
-                                type="number" 
-                                label="Código de usuário"
-                                value={codUser}
-                                onChange={(event) => setCodUser(event.target.value)}
-                            />
-                        </div>
-                        <div className={styles.textfield}>
-                            <InputSenha 
-                                error={senhaError}
-                                label="Senha"
-                                value={senha}
-                                onChange={(event) => setSenha(event.target.value)}
-                            />
-                        </div>
-                        <div className={styles.textfield}>
-                            <button 
-                                className={styles.btn_login}
-                                onClick={() => signIn()}
+                    <div className={styles.textfield}>
+                        <InputSenha 
+                            error={senhaError}
+                            label="Senha"
+                            value={senha}
+                            onChange={(event) => setSenha(event.target.value)}
+                        />         
+                        <Typography
+                            variant='body1'
+                            sx={{
+                                textAlign: 'right',
+                                fontSize: '16px',
+                                fontFamily: 'Roboto, sans-serif',
+                                marginTop: '5px', 
+                            }}
+                        >
+                            Esqueceu seus dados?
+                            <Link 
+                                href="/"
+                                className={styles.text}
                             >
-                                entrar
-                            </button>
-                        </div>
+                                Clique aqui
+                            </Link>
+                        </Typography>
+                        <Typography
+                            variant='body1'
+                            sx={{
+                                textAlign: 'left',
+                            }}
+                        >
+                            <Checkbox sx={{ alignItems: 'center' }} {...label} />
+                            Manter conectado
+                        </Typography>
                     </div>
-                </form>
-                <div className={styles.area_segunda_parte}></div>
-            </div>
-        </>
+                    <div className={styles.textfield}>
+                        <Button
+                            variant="contained"
+                            fullWidth
+                            onClick={() => signIn()}
+                            sx={{
+                                textTransform: 'uppercase',
+                                padding: '10px',
+                                fontWeight: 'bold',
+                                letterSpacing: '2px',
+                                backgroundColor: '#273e74',
+                                color: 'white',
+                                '&:hover': {
+                                    backgroundColor: '#273e74da',
+                                },
+                            }}>
+                            Entrar
+                        </Button>
+                        <Typography
+                            variant='body1'
+                            sx={{
+                                fontSize: '16px',
+                                fontFamily: 'Roboto, sans-serif',
+                                marginTop: '25px',
+                                marginBottom: '3px',
+                            }}>
+                                Primeiro acesso?
+                        </Typography>
+                        <Link href='/' className={styles.text}>Cria sua senha aqui</Link>
+                    </div>
+                    <p className={styles.grupo_asoec}>Grupo ASOEC</p>
+                    <Box
+                        className={styles.images}
+                        sx={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                        }}
+                    >
+                        <Image 
+                            src="/images/unitri.svg"
+                            width={120}
+                            height={100}
+                            alt='unitri'
+                        />
+                        <Image 
+                            src="/images/dom-helder.svg"
+                            width={50}
+                            height={100}
+                            alt='helder'
+                        />
+                        <Image 
+                            src="/images/universo.svg"
+                            width={120}
+                            height={100}
+                            alt='universo'
+                        />
+                    </Box>
+                {/* </div> */}
+                </Box>
+            </Box>
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '95.6vh',
+                    width: '141vh',
+                    backgroundImage: `url('/images/students.png')`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                }}>
+            </Box>
+        </Grid>
     )
 }
