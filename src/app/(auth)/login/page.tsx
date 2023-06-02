@@ -13,17 +13,17 @@ import Link from 'next/link';
 export default function Login() {
     // const { data: session  } = useSession()
     // console.log(session);
-
+           
     const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
-
+                      
     const [codUser, setCodUser] = useState('');
     const [senha, setSenha] = useState('');
     const [codUserError, setCodUserError] = useState(false);
     const [senhaError, setSenhaError] = useState(false);
-    
+                         
     return (
         <Grid 
-            item 
+            item xs={12} sm={6} 
             sx={{
                 position: 'relative',
                 display: 'grid',
@@ -47,24 +47,30 @@ export default function Login() {
                     maxWidth: '90%',
                     boxShadow: '5px 5px 10px 10px rgba(0, 0, 0, 0.5)',
                     backgroundColor: 'white',
+                }}>
+                <Box
+                    className={styles.logo_assoec}
+                    sx={{
+                        gridArea: 'image',
+                        display: 'flex',
+                        alignItems: 'flex-end',
+                        justifyContent: 'center',
+                        marginBottom: '2.5em',
                     }}>
-                <div className={styles.logo_assoec}>
                         <Image 
                             src="/images/asoec.svg"
                             width={130}
                             height={130}
                             alt='teste'
                         />
-                </div>
+                </Box>
                 <Box
                     sx={{
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
                         textAlign: 'center',
-                    }}
-                >
-                {/* <div className={styles.card}> */}
+                    }}>
                     <Typography 
                         variant="h1" 
                         sx={{ 
@@ -72,7 +78,7 @@ export default function Login() {
                             marginBottom: '10px', 
                             textAlign: 'left', 
                             fontFamily: 'Roboto, sans-serif' 
-                    }}>
+                        }}>
                         Bem-vindo à ASOEC!
                     </Typography>
                     <Typography 
@@ -82,8 +88,8 @@ export default function Login() {
                             fontFamily: 'Roboto, sans-serif', 
                             marginBottom: '50px' 
                         }}>
-                        Somos um grupo de instituições de ensino, incluindo a Universo, Unitri e Colégio Dom Helder. Acesse suas informações
-                        e explore nossas ferramentas para uma jornada acadêmica eficiente.
+                            Somos um grupo de instituições de ensino, incluindo a Universo, Unitri e Colégio Dom Helder. Acesse suas informações
+                            e explore nossas ferramentas para uma jornada acadêmica eficiente.
                     </Typography>
                     <div className={styles.textfield}>
                         <Input
@@ -108,8 +114,7 @@ export default function Login() {
                                 fontSize: '16px',
                                 fontFamily: 'Roboto, sans-serif',
                                 marginTop: '5px', 
-                            }}
-                        >
+                            }}>
                             Esqueceu seus dados?
                             <Link 
                                 href="/"
@@ -122,8 +127,7 @@ export default function Login() {
                             variant='body1'
                             sx={{
                                 textAlign: 'left',
-                            }}
-                        >
+                            }}>
                             <Checkbox sx={{ alignItems: 'center' }} {...label} />
                             Manter conectado
                         </Typography>
@@ -158,15 +162,22 @@ export default function Login() {
                         </Typography>
                         <Link href='/' className={styles.text}>Cria sua senha aqui</Link>
                     </div>
-                    <p className={styles.grupo_asoec}>Grupo ASOEC</p>
+                    <Typography
+                        sx={{
+                            fontFamily: 'Robot, sans-serif',
+                            fontSize: '14px',
+                            marginTop: '23px',
+                            marginBottom: '0px',
+                        }}>
+                        Grupo ASOEC
+                    </Typography>
                     <Box
                         className={styles.images}
                         sx={{
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                        }}
-                    >
+                        }}>
                         <Image 
                             src="/images/unitri.svg"
                             width={120}
@@ -186,7 +197,6 @@ export default function Login() {
                             alt='universo'
                         />
                     </Box>
-                {/* </div> */}
                 </Box>
             </Box>
             <Box

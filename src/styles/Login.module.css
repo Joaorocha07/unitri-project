@@ -1,28 +1,6 @@
-.logo_assoec {
-    grid-area: image;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    margin-bottom: 2.5em;
-}
-
 .logo_assoec img {
     height: auto;
     margin-right: 10px;
-}
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-.grupo_asoec {
-    font-family: 'Roboto', sans-serif; 
-    font-size: 15px;
-    margin-top: 25px;
-    margin-bottom: 0px;
 }
 
 .textfield {
@@ -41,3 +19,13 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+
+@media only screen and (max-width: 600px) {
+    .container {
+        /* display: none; */
+    }   
+              
+    .card {
+        display: none;
+    }
+} 
