@@ -23,19 +23,21 @@ export default function Login() {
                          
     return (
         <Grid 
-            item xs={12} sm={6} 
+            item xs={12} sm={6} md={6} lg={6}
+            className={styles.main_container}
             sx={{
                 position: 'relative',
                 display: 'grid',
                 minHeight: '100vh',
                 padding: '1em',
                 gridTemplateColumns: '1fr 1fr',
-                backgroundImage: `url('/images/students.png')`,
+                backgroundImage: `url('/images/students-escura.jpeg')`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
             }}>
             <Box
+                className={styles.form_container}
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
@@ -64,7 +66,8 @@ export default function Login() {
                             alt='teste'
                         />
                 </Box>
-                <Box
+                <Box    
+                    className={styles.form_container_parte_de_dentro}
                     sx={{
                         display: 'flex',
                         flexDirection: 'column',
@@ -86,7 +89,7 @@ export default function Login() {
                         sx={{ 
                             textAlign: 'justify', 
                             fontFamily: 'Roboto, sans-serif', 
-                            marginBottom: '50px' 
+                            marginBottom: '30px' 
                         }}>
                             Somos um grupo de instituições de ensino, incluindo a Universo, Unitri e Colégio Dom Helder. Acesse suas informações
                             e explore nossas ferramentas para uma jornada acadêmica eficiente.
@@ -163,6 +166,7 @@ export default function Login() {
                         <Link href='/' className={styles.text}>Cria sua senha aqui</Link>
                     </div>
                     <Typography
+                        className={styles.grupo_asoec}
                         sx={{
                             fontFamily: 'Robot, sans-serif',
                             fontSize: '14px',
@@ -200,6 +204,7 @@ export default function Login() {
                 </Box>
             </Box>
             <Box
+                className={styles.parte_dois_container}
                 sx={{
                     display: 'flex',
                     justifyContent: 'center',
