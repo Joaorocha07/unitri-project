@@ -23,7 +23,7 @@ export default function Login() {
                          
     return (
         <Grid 
-            item xs={12} sm={6} md={6} lg={6}
+            //item xs={12} sm={6} md={6} lg={6}
             className={styles.main_container}
             sx={{
                 position: 'relative',
@@ -157,6 +157,7 @@ export default function Login() {
                         </Button>
                         <Typography
                             variant='body1'
+                            className={styles.primeiro_acesso}
                             sx={{
                                 fontSize: '16px',
                                 fontFamily: 'Roboto, sans-serif',
