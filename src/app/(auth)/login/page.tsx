@@ -75,6 +75,7 @@ export default function Login() {
                         textAlign: 'center',
                     }}>
                     <Typography 
+                        className={styles.titulo}
                         variant="h1" 
                         sx={{ 
                             fontSize: '40px',
@@ -85,6 +86,7 @@ export default function Login() {
                         Bem-vindo à ASOEC!
                     </Typography>
                     <Typography 
+                        className={styles.paragrafo}
                         variant="body1" 
                         sx={{ 
                             textAlign: 'justify', 

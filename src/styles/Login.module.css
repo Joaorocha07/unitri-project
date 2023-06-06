@@ -21,231 +21,181 @@
 }
 
 @media (max-width: 1440px) {
-    .main_container {
-        grid-template-columns: 1fr 1fr;
-    }  
-      
     .form_container {
-        padding: 60px;
-        height: 82vh;
-        width: auto;
+        width: 82% !important;
+        height: 84.6vh !important;
     } 
 
     .logo_assoec {
-        margin-top: 215px;
-    }
-
-    .form_container_parte_de_dentro h1 {
-        font-size: 35px;
-    }
-      
-    .parte_dois_container {
-        width: 100%;
-        height: 96.1vh;
-        /* background-image: none; */
-    }  
-        
-    .grupo_asoec {
-        margin: 10px;
         padding: 0;
+        margin-bottom: 0px;
     }
 
-    .images {
-        margin-bottom: 200px;
+    .grupo_asoec {
+        margin: 0;
+    }
+
+    .parte_dois_container {
+        margin: 0;
+        width: 100vh !important;
+        height: 96.4vh !important;
     }
 }
+
+@media (max-width: 1366px) {
+    .form_container {
+        width: 81.2% !important;
+        height: 84.6vh !important;
+    }
+ 
+    .logo_assoec {
+        padding: 0;
+        margin-bottom: 0px;
+    }
+ 
+    .grupo_asoec {
+        margin: 0;
+    }
+  
+    .parte_dois_container {
+        margin: 0;
+        width: 94.5vh !important;
+        height: 96.4vh !important;
+    }
+}
+
 @media (max-width: 1024px) {
-    .main_container {
-        grid-template-columns: 1fr;
-    }  
-      
     .form_container {
-        padding: 60px;
-        height: 82vh;
-        width: auto;
-    } 
-
-    .logo_assoec {
-        margin-top: 215px;
+        width: 45.3vh !important;
+        height: 84.6vh !important;
     }
 
-    .form_container_parte_de_dentro h1 {
-        font-size: 35px;
-    }
-      
     .parte_dois_container {
-        width: 100%;
-        height: auto;
-        background-image: none;
-    }  
-        
-    .grupo_asoec {
-        margin: 10px;
-        padding: 0;
-    }
-
-    .images {
-        margin-bottom: 200px;
+        width: 60vh !important;
+        height: 96.4vh !important;
     }
 }
 
-@media (max-width: 840px) {
+@media (max-width: 900px) {
     .main_container {
-        grid-template-columns: 1fr;
-    }  
-      
+        background-image: none;
+    }
+
     .form_container {
-        padding: 20px;
-        height: 91vh;
-        width: auto;
-    } 
+        width: 90.3vh !important;
+        height: 84.6vh !important;
+    }
 
     .logo_assoec {
-       margin: 0;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .parte_dois_container {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .form_container {
+        width: 75vh !important;
+        height: 85vh !important;
+    }
+}
+
+@media (max-width: 500px) {
+    .form_container {
+      width: 82% !important;
+      height: 85vh !important;
+    }
+
+    .logo_assoec {
+        padding: 0;
+        margin-bottom: 5px;
     }
 
     .logo_assoec img {
-        width: 110px;
-        height: 110px;
+        width: 100px;
+        height: 100px;
     }
 
-    .form_container_parte_de_dentro h1 {
-        font-size: 35px;
+    .titulo {
+        font-size: 36px;
     }
-      
+
     .parte_dois_container {
-        width: 100%;
-        height: auto;
-        background-image: none;
-    }  
-        
-    .grupo_asoec {
-        margin: 10px;
-        padding: 0;
-    }
-
-    .images {
         display: none;
     }
-} 
+}
 
-@media (max-width: 768px) {
-    .main_container {
-        grid-template-columns: 1fr;
-        background-image: none;
+@media (max-width: 425px) {
+    .form_container {
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 40vh !important;
+        height: 90vh !important;
+        box-shadow: none;
+    }
+    
+    .logo_assoec {
         margin: 0;
         padding: 0;
-    }  
-      
-    .form_container {
-        padding: 60px;
-        height: auto;
-        width: auto;
-    } 
-
-    .logo_assoec {
-        margin-bottom: 2.5em;
-    }
-
-    .form_container_parte_de_dentro h1 {
-        font-size: 30px;
-    }
-      
-    .parte_dois_container {
-        width: 100%;
-        height: auto;
-        background-image: none;
-    }  
-        
-    .grupo_asoec {
-        margin: 31px;
-        padding: 0;
+        margin-bottom: 30px;
     }
 }
 
 @media (max-width: 375px) {
-    .main_container {
-        grid-template-columns: 1fr;
-        background-image: none;
-        margin: 0;
-        padding: 0;
-    }  
-      
     .form_container {
-        padding: 50px;
-        height: auto;
-        width: auto;
-    } 
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 40vh !important;
+        height: 90vh !important;
+        box-shadow: none;
+    }
 
     .logo_assoec {
-        margin-bottom: 1.6em;
-    }
-
-    .form_container_parte_de_dentro h1 {
-        font-size: 25px;
-    }
-      
-    .parte_dois_container {
-        width: 100%;
-        height: auto;
-        background-image: none;
-    }  
-        
-    .grupo_asoec {
-        margin: 10px;
+        margin: 0;
         padding: 0;
+        margin-bottom: 30px;
     }
 
-    .images {
-        display: none;
+    .titulo {
+        font-size: 34px;
     }
 }
 
 @media (max-width: 320px) {
     .main_container {
-        padding: 10px;
+        padding: 0;
+        margin: 0;
+        background-image: none;
     }
     
     .form_container {
+        margin: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 35vh !important;
+        height: 90vh !important;
         box-shadow: none;
-        padding: 15px;
-        width: 100%;
-        height: 94vh;
-    }
-    
-    .form_container_parte_de_dentro {
-        margin-bottom: 20px;
-    }
- 
-    .form_container_parte_de_dentro p {
-        font-size: 14px;
-        margin-bottom: 25px;
     }
 
-    .form_container_parte_de_dentro h1 {
+    .logo_assoec {
+        padding: 0;
+        margin-bottom: 30px;
+    }
+
+    .titulo {
         font-size: 25px;
     }
-    
-    .textfield {
-        margin-bottom: 10px;
+
+    .paragrafo {
+        font-size: 15px;
     }
-    
-    .images {
-        display: none;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-           
+
     .images img {
-            margin-bottom: 10px;
-    }
-        
-    .parte_dois_container {
-        width: 100%;
-    }
- 
-    .grupo_asoec {
-        margin: 10px;
-        padding: 0;
+        margin: 8px;
+        width: 85px;
+        height: 85px;
     }
 }
