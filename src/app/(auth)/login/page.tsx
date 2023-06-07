@@ -26,11 +26,15 @@ export default function Login() {
             //item xs={12} sm={6} md={6} lg={6}
             className={styles.main_container}
             sx={{
-                position: 'relative',
-                display: 'grid',
-                minHeight: '100vh',
-                padding: '1em',
-                gridTemplateColumns: '1fr 1fr',
+                // position: 'relative',
+                // display: 'grid',
+                // minHeight: '100vh',
+                // padding: '1em',
+                // gridTemplateColumns: '1fr 1fr',
+                minHeight: "100vh",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 backgroundImage: `url('/images/students-escura.jpeg')`,
                 backgroundRepeat: 'no-repeat',
                 backgroundSize: 'cover',
@@ -39,25 +43,31 @@ export default function Login() {
             <Box
                 className={styles.form_container}
                 sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    textAlign: 'center',
-                    padding: '50px',
-                    height: '85vh',
-                    width: '50vh',
-                    maxWidth: '90%',
-                    boxShadow: '5px 5px 10px 10px rgba(0, 0, 0, 0.5)',
+                    // display: 'flex',
+                    // flexDirection: 'column',
+                    // justifyContent: 'center',
+                    // textAlign: 'center',
+                    // padding: '20px',
+                    // height: '85vh',
+                    // width: '50vh',
+                    // maxWidth: '90%',
+                    // boxShadow: '5px 5px 10px 10px rgba(0, 0, 0, 0.5)',
+                    width: "30%",
+                    height: "90vh",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
                     backgroundColor: 'white',
                 }}>
                 <Box
                     className={styles.logo_assoec}
                     sx={{
-                        gridArea: 'image',
-                        display: 'flex',
-                        alignItems: 'flex-end',
+                        margin: '0',
+                        alignItems: 'center',
                         justifyContent: 'center',
-                        marginBottom: '2.5em',
+                        marginTop: '.5em',
+                        marginBottom: '.5em',
+                       
                     }}>
                         <Image 
                             src="/images/asoec.svg"
@@ -69,6 +79,7 @@ export default function Login() {
                 <Box    
                     className={styles.form_container_parte_de_dentro}
                     sx={{
+                        width: "80%",
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'center',
@@ -78,7 +89,8 @@ export default function Login() {
                         className={styles.titulo}
                         variant="h1" 
                         sx={{ 
-                            fontSize: '40px',
+                            width: "100%",
+                            fontSize: '35px',
                             marginBottom: '10px', 
                             textAlign: 'left', 
                             fontFamily: 'Roboto, sans-serif' 
@@ -91,7 +103,8 @@ export default function Login() {
                         sx={{ 
                             textAlign: 'justify', 
                             fontFamily: 'Roboto, sans-serif', 
-                            marginBottom: '30px' 
+                            marginBottom: '30px',
+                            width: "100%",
                         }}>
                             Somos um grupo de instituições de ensino, incluindo a Universo, Unitri e Colégio Dom Helder. Acesse suas informações
                             e explore nossas ferramentas para uma jornada acadêmica eficiente.
@@ -115,10 +128,13 @@ export default function Login() {
                         <Typography
                             variant='body1'
                             sx={{
-                                textAlign: 'right',
-                                fontSize: '16px',
-                                fontFamily: 'Roboto, sans-serif',
-                                marginTop: '5px', 
+                                // textAlign: 'right',
+                                // fontSize: '16px',
+                                // fontFamily: 'Roboto, sans-serif',
+                                // marginTop: '5px', 
+                                marginTop: "16px",
+                                width: "100%",
+                                textAlign: "end"
                             }}>
                             Esqueceu seus dados?
                             <Link 
@@ -131,7 +147,9 @@ export default function Login() {
                         <Typography
                             variant='body1'
                             sx={{
-                                textAlign: 'left',
+                                marginTop: "16px",
+                                width: "100%",
+                                textAlign: "start",
                             }}>
                             <Checkbox sx={{ alignItems: 'center' }} {...label} />
                             Manter conectado
@@ -143,12 +161,18 @@ export default function Login() {
                             fullWidth
                             onClick={() => signIn()}
                             sx={{
-                                textTransform: 'uppercase',
-                                padding: '10px',
-                                fontWeight: 'bold',
-                                letterSpacing: '2px',
+                                width: "100%",
+                                // height: "36px",
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                marginBottom: "20px",
+                                // textTransform: 'uppercase',
+                                // padding: '10px',
+                                // fontWeight: 'bold',
+                                // letterSpacing: '2px',
                                 backgroundColor: '#273e74',
-                                color: 'white',
+                                // color: 'white',
                                 '&:hover': {
                                     backgroundColor: '#273e74da',
                                 },
@@ -159,10 +183,11 @@ export default function Login() {
                             variant='body1'
                             className={styles.primeiro_acesso}
                             sx={{
-                                fontSize: '16px',
-                                fontFamily: 'Roboto, sans-serif',
-                                marginTop: '25px',
-                                marginBottom: '3px',
+                                margin: "auto 0",
+                                // fontSize: '16px',
+                                // fontFamily: 'Roboto, sans-serif',
+                                // marginTop: '25px',
+                                // marginBottom: '3px',
                             }}>
                                 Primeiro acesso?
                         </Typography>
@@ -184,24 +209,46 @@ export default function Login() {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
+                            width: "100%",
+                            marginTop: "auto",
+                            marginBottom: "20px",
+                            padding: "5px",
                         }}>
                         <Image 
                             src="/images/unitri.svg"
                             width={120}
                             height={100}
                             alt='unitri'
+                            style={{
+                                width: "80px",
+                                height: "60px",
+                                // backgroundColor: "gray",
+                                flex: "33%"
+                              }}
                         />
                         <Image 
                             src="/images/dom-helder.svg"
                             width={50}
                             height={100}
                             alt='helder'
+                            style={{
+                                width: "60px",
+                                height: "60px",
+                                // backgroundColor: "gray",
+                                flex: "33%"
+                              }}
                         />
                         <Image 
                             src="/images/universo.svg"
                             width={120}
                             height={100}
                             alt='universo'
+                            style={{
+                                width: "80px",
+                                height: "60px",
+                                // backgroundColor: "gray",
+                                flex: "33%"
+                              }}
                         />
                     </Box>
                 </Box>
@@ -209,11 +256,14 @@ export default function Login() {
             <Box
                 className={styles.parte_dois_container}
                 sx={{
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    height: '95.6vh',
-                    width: '141vh',
+                    // display: 'flex',
+                    // justifyContent: 'center',
+                    // alignItems: 'center',
+                    // height: '95.6vh',
+                    // width: '141vh',
+                    // padding: '20px',
+                    width: "60%", 
+                    height: "90vh",
                     backgroundImage: `url('/images/students.png')`,
                     backgroundRepeat: 'no-repeat',
                     backgroundSize: 'cover',
